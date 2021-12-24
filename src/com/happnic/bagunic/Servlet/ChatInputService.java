@@ -27,11 +27,11 @@ public class ChatInputService extends HttpServlet {
 		int cnt = dao.ChatInput(email,chat);
 		
 		if(cnt>0) {
-			System.out.println(email+" 채팅 저장 성공");
-			out.write("채팅 전송 성공");
+			System.out.println(email+" : chat save success");
+			out.write(" : chat save success");
 		}else {
-			System.out.println(email+" 채팅 저장 실패");
-			out.write("채팅 전송 실패");
+			System.out.println(email+"  : chat save fail ");
+			out.write(" : chat save fail");
 		}
 	}
 }

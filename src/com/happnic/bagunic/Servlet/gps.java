@@ -20,7 +20,7 @@ public class gps extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		String gps = request.getParameter("gps");
-		System.out.println("gps : " + gps);
+		System.out.println("return gps : " + gps);
 	}
 
 }

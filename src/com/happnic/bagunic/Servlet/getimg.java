@@ -25,19 +25,19 @@ public class getimg extends HttpServlet {
 	        String fileName = new String();
 	        PrintWriter out = response.getWriter();
 	        
-	        int sizeLimit = 5 * 1024 * 1024; // 5메가까지 제한 넘어서면 예외발생
+	        int sizeLimit = 5 * 1024 * 1024;
 	        try {
 	            MultipartRequest multi = new MultipartRequest(request, folderTypePath, sizeLimit,
 	                    new DefaultFileRenamePolicy());
 	            Enumeration files = multi.getFileNames();
-	            //파일 정보가 있다면
+
 	            if (files.hasMoreElements()) {
 	                name = (String) files.nextElement();
 	                fileName = multi.getFilesystemName(name);
 	            }
-	            System.out.println("이미지를 저장하였습니다. : " + fileName);
+	            System.out.println("img save success" + fileName);
 	        } catch (IOException e) {
-	            out.println("안드로이드로부터 이미지를 받아옵니다.");
+	            out.println("img save fail");
 	        }
 	}
 

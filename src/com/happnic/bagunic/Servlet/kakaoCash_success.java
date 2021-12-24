@@ -18,20 +18,17 @@ public class kakaoCash_success extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		//°áÁ¦ ¿Ï·á ÆäÀÌÁö.
+		//ì¹´ì¹´ì˜¤ ë¡œê·¸ì¸ ì„±ê³µ
 		String email = request.getParameter("email");
 		String basket_type = request.getParameter("basket_type");
 		String park_area = request.getParameter("park_area");
 		
-		System.out.println(email +"´Ô "+park_area+" : "+basket_type + "");
-		//°áÁ¦ ¿Ï·á ¹®±¸ Ãâ·Â
-		out.print("<html><head><title>Bagunic °áÁ¦ ¿Ï·á</title></head>");
+		System.out.println(email +" at "+park_area+" : "+basket_type + "");
+		out.print("<html><head><title>Bagunic Welcome");
 		out.print("<body>");
-		out.print("<h1>°áÁ¦°¡ ¼º°øÇÏ¿´½À´Ï´Ù.</h1>");
+		out.print("<h1>ê²°ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤</h1>");
 		out.println("</body></html>");
 		out.close();
-		
-		//»ç¿ëÀÚ°¡ ¿äÃ»ÇÑ Àå¼ÒÀÇ ¹Ù±¸´Ï Áß 1°³ÀÇ ¹Ù±¸´Ï ÄÚµå¸¦ »ç¿ëÀÚ¿¡°Ô Àü´Ş
 		
 	}
 }

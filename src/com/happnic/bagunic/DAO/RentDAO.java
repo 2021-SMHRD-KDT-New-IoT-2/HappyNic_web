@@ -31,7 +31,6 @@ public class RentDAO {
 		}
 	}
 
-	// »ç¿ëÇß´ø º¯¼ö close
 	public void close() {
 		try {
 			if (rs != null) {
@@ -48,7 +47,7 @@ public class RentDAO {
 		}
 	}
 
-	//¹Ù±¸´Ï ´ë¿©½Ã ´ë¿©¹øÈ£ ºÎ¿©
+	//ëŒ€ì—¬!
 	public int rent(String basket_id, String email) {
 
 		connection();
@@ -69,7 +68,7 @@ public class RentDAO {
 		return cnt;	
 	}
 	
-	public ArrayList<RentVO> reservation_info(String email) {//¹Ù±¸´Ï ´ë¿©±â·Ï Á¶È¸
+	public ArrayList<RentVO> reservation_info(String email) {
 	      
 		RentVO vo = null;
 	      ArrayList<RentVO> user_info = new ArrayList<RentVO>();
@@ -92,8 +91,7 @@ public class RentDAO {
 	            String ren_date = rs.getString(5);
 	            String ren_area = rs.getString(6);
 	            vo = new RentVO(name, bas_ren_num, bas_id, ren_hours, ren_date,ren_area);
-	            user_info.add(vo);
-	            
+	            user_info.add(vo);            
 	         }
 	         
 	      } catch (Exception e) {

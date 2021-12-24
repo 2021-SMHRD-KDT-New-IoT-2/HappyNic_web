@@ -34,11 +34,11 @@ public class JoinService extends HttpServlet {
 		int cnt = dao.join(email, pw, name, phone);
 		
 		if(cnt>0) {
-			System.out.println("회원가입 성공");
-			out.write("회원 가입 성공");
+			System.out.println(email + " : join success");
+			out.write(email + " : join success");
 		}else {
-			System.out.println("회원가입 실패");
-			out.write("회원 가입 실패");
+			System.out.println(email + " : join fail");
+			out.write(email + " : join fail");
 		}
 	}
 

@@ -25,9 +25,9 @@ public class kakaoCash_cancle extends HttpServlet {
 		System.out.println(email);
 		System.out.println(basket_type);
 
-		out.print("<html><head><title>Bagunic °áÁ¦ Ãë¼Ò</title></head>");
+		out.print("<html><head><title>Bagunic</title></head>");
 		out.print("<body>");
-		out.print("<h1>°áÁ¦¸¦ Ãë¼ÒÇÏ¿´½À´Ï´Ù.</h1>");
+		out.print("<h1>ê²°ì œë¥¼ ì·¨ì†Œí•˜ì˜€ìŠµë‹ˆë‹¤.</h1>");
 		out.println("</body></html>");
 		out.close();
 	}

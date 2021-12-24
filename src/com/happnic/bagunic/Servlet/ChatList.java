@@ -19,7 +19,7 @@ public class ChatList extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// 전체 채팅 내용 가져오기
+		
 		AppchatDAO dao = new AppchatDAO();
 		ArrayList<AppChatVO> list = dao.chatList();
 		response.setCharacterEncoding("UTF-8");

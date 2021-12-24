@@ -26,11 +26,11 @@ public class email_check extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		if(check) {
-			out.print(check);//이미 존재하는 아이디
-			System.out.println(email + " : 이미 존재하는 아이디입니다.");
+			out.print(check);
+			System.out.println(email + " : available");
 		}else if(check) {
-			out.print(check);// 가입 가능
-			System.out.println(email + " : 가입 가능합니다.");
+			out.print(check);
+			System.out.println(email + " : exist");
 		}
 	}
 }

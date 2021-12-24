@@ -21,24 +21,24 @@ public class LoginService extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String id = request.getParameter("email");
+		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
 		
-		System.out.print(id);
+		System.out.print(email);
 		
 		UserDAO dao = new UserDAO();
-		UserVO vo = dao.Login(id,pw);
+		UserVO vo = dao.Login(email,pw);
 		
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		
 		
 		if(vo != null) {
-			System.out.println(" 로그인 성공!");
+			System.out.println(email+" : Login ");
 			String result = new Gson().toJson(vo);
 			out.write(result);
 		}else {
-			System.out.println(" 로그인 실패!");
+			System.out.println(email + ": Login fail");
 			out.write("fail");
 		}
 	}

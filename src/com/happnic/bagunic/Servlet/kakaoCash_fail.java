@@ -23,9 +23,9 @@ public class kakaoCash_fail extends HttpServlet {
 
 		System.out.println(email);
 
-		out.print("<html><head><title>Bagunic °áÁ¦ ½ÇÆÐ</title></head>");
+		out.print("<html><head><title>Bagunic</title></head>");
 		out.print("<body>");
-		out.print("<h1>°áÁ¦°¡ ½ÇÆÐÇÏ¿´½À´Ï´Ù.</h1>");
+		out.print("<h1>ê²°ì œê°€ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.</h1>");
 		out.println("</body></html>");
 		out.close();
 	}

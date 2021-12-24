@@ -7,13 +7,13 @@ public class MyAuthentication extends Authenticator{
 	PasswordAuthentication pa;
     public MyAuthentication(){
          
-        String id = "bagunic21@gmail.com";  //¹ß¼ÖÇÒ ÀÌ¸ŞÀÏÀÇ ¾ÆÀÌµğ
-        String pw = "gkskenftpt123";         //¹ß¼ÛÇÒ ÀÌ¸ŞÀÏÀÇ ºñ¹Ğ¹øÈ£
+        String id = "bagunic21@gmail.com";  // ë³´ë‚¼ ë©”ì¼ 
+        String pw = "gkskenftpt123";         // ë¹„ë°€ë²ˆí˜¸
  
         pa = new PasswordAuthentication(id, pw);
     }
  
-    // ½Ã½ºÅÛ¿¡¼­ »ç¿ëÇÏ´Â ÀÎÁõÁ¤º¸
+    //ë³´ë‚¼ ë©”ì¼ ì¸ì¦
     public PasswordAuthentication getPasswordAuthentication() {
         return pa;
     }

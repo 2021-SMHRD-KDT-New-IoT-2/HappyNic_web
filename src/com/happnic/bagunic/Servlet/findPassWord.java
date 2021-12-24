@@ -22,7 +22,7 @@ public class findPassWord extends HttpServlet {
 		String email = request.getParameter("email");
 		
 		UserDAO dao = new UserDAO();
-		String[] arr = dao.findPw("revival2008@naver.com","Çö¼öÁö");
+		String[] arr = dao.findPw("revival2008@naver.com","happyNic");
 		
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();

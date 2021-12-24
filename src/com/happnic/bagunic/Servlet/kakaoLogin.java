@@ -26,14 +26,16 @@ public class kakaoLogin extends HttpServlet {
 
 		UserDAO dao = new UserDAO();
 		
-		System.out.println("Ä«Ä«¿À ·Î±×ÀÎ : "+"("+name+")"+email);
+		System.out.println("Ä«Ä«ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ : "+"("+name+")"+email);
 		
-		//Ä«Ä«¿À·Î Ã¹ ·Î±×ÀÎ½Ã ¾ÆÀÌµð°¡ ÀÖ´Â Áö È®ÀÎ -> email³Ñ°ÜÁÖµµ·Ï ¼öÁ¤(String?gson)
+		//Ä«Ä«ï¿½ï¿½ï¿½ï¿½ Ã¹ ï¿½Î±ï¿½ï¿½Î½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ -> emailï¿½Ñ°ï¿½ï¿½Öµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(String?gson)
 		if(dao.emailCheck(email)) {
 			dao.kakaoJoin(email,name);
 			out.write("email");
+			System.out.println(email + ": kakao join");
 		}
-		out.write("Ä«Ä«¿À ·Î±×ÀÎ ¿Ï·á");
+		out.write("email");
+		System.out.println(email + ": kakao login success");
 	}
 
 }
