@@ -28,7 +28,6 @@ public class kakaoLogin extends HttpServlet {
 		
 		System.out.println("īī�� �α��� : "+"("+name+")"+email);
 		
-		//īī���� ù �α��ν� ���̵� �ִ� �� Ȯ�� -> email�Ѱ��ֵ��� ����(String?gson)
 		if(dao.emailCheck(email)) {
 			dao.kakaoJoin(email,name);
 			out.write("email");
